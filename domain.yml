@@ -1,0 +1,38 @@
+intents:
+  - greet
+  - goodbye
+  - thank_you
+  - affirm
+  - enquire_campus_map
+  - enquire_building_location
+
+actions:
+  - utter_greet
+  - utter_goodbye
+  - utter_youre_welcome
+  - show_campus_map
+  - actions.ActionGetBuildingDirections
+
+entities:
+  - building_name
+
+slots:
+  building_name:
+    type: text
+
+templates:
+  utter_greet:
+    - text: "Hey!"
+
+  utter_goodbye:
+    - text: "Bye"
+
+  utter_youre_welcome:
+    - text: "No problem"
+    - text: "You're welcome"
+
+  show_campus_map:
+    - image: "https://cdn.southampton.ac.uk/assets/imported/transforms/content-block/UsefulDownloads_Download/684F632C728147BF967611A3D28D9959/Gower%20map_main%20build_stage1_justsite.jpg"
+
+  show_building_directions:
+    - text: "It's that way ->"
